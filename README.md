@@ -27,3 +27,4 @@ Before using these scripts, make sure you have:
 - AWS CLI installed and configured:
 ```bash
 aws configure
+make chnages
