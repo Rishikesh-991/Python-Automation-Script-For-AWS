@@ -1,20 +1,9 @@
 # AWS Automation with Python
 
 ## Overview
-This repository contains **Python scripts that fully automate AWS resource provisioning and management**. Using **Boto3** (the official AWS SDK for Python), these scripts allow you to programmatically create, configure, and manage AWS services such as:
+This repository contains Python scripts that **fully automate AWS resource provisioning, Kubernetes deployments, and monitoring setups**. Using **Boto3** (AWS SDK for Python) and Kubernetes YAML/automation scripts, you can programmatically create, configure, and manage AWS services and EKS clusters, as well as deploy monitoring stacks like **Prometheus** and **Grafana**.
 
-- EC2 Instances
-- S3 Buckets
-- IAM Users, Roles, and Policies
-- RDS Databases (PostgreSQL)
-- Lambda Functions
-- EKS Clusters
-- Docker Images (ECR & Docker Hub)
-- Security Groups
-- CloudFormation Stacks
-- Minikube/Kubernetes Monitoring (Grafana, Prometheus)
-
-Automation reduces manual errors, ensures consistency, and saves time when managing cloud resources.
+Automation reduces manual errors, ensures consistency, and saves time when managing cloud environments.
 
 ---
 
@@ -22,23 +11,26 @@ Automation reduces manual errors, ensures consistency, and saves time when manag
 
 | Feature | Description |
 |---------|-------------|
-| **EC2 Automation** | Launch, stop, start, and terminate EC2 instances, configure IAM roles and security groups. |
-| **S3 Bucket Management** | Create and delete S3 buckets, manage objects and permissions. |
-| **IAM Management** | Automate creation and assignment of IAM users, roles, and policies. |
-| **RDS Automation** | Create and manage PostgreSQL databases in AWS. |
+| **EC2 Automation** | Launch, stop, start, and terminate EC2 instances with IAM roles and security groups. |
+| **S3 Bucket Management** | Create, delete, and manage S3 buckets and objects. |
+| **IAM Management** | Automate creation of IAM users, roles, groups, and policies. |
+| **RDS Automation** | Create and manage PostgreSQL databases on AWS. |
 | **Lambda Functions** | Deploy, configure, and monitor AWS Lambda functions. |
-| **EKS & Kubernetes** | Automate EKS cluster deployment, including monitoring with Grafana and Prometheus. |
-| **Docker Automation** | Push Docker images to AWS ECR or Docker Hub automatically. |
-| **CloudFormation** | Deploy AWS stacks programmatically and monitor their status. |
-| **Security** | Automate security group creation and policy attachment. |
+| **Docker Automation** | Build and push Docker images to AWS ECR or Docker Hub. |
+| **CloudFormation** | Deploy AWS stacks programmatically and monitor status. |
+| **EKS & Kubernetes** | Automate EKS cluster deployment and management, including:
+  - Deploying services (nginx, applications)
+  - Deploying monitoring stacks (Prometheus, Grafana)
+  - Deploying Minikube and Kind clusters for testing |
+| **Security Automation** | Automatically create security groups and attach policies. |
 
 ---
 
 ## Prerequisites
-Before running these scripts, ensure you have:
+Before running the scripts, ensure you have:
 
-- **Python 3.7+**
-- An **AWS account** with proper permissions
-- **AWS CLI** installed and configured:  
+- Python 3.7+
+- AWS account with proper permissions
+- AWS CLI installed and configured:
 ```bash
 aws configure
