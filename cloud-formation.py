@@ -88,6 +88,9 @@ def wait_for_completion(stack_name, action):
         waiter = cf_client.get_waiter('stack_update_complete')
     elif action == "delete":
         waiter = cf_client.get_waiter('stack_delete_complete')
+
+    elif action == "update":
+        waiter = cf_client.get_waiter('stack_update_complete')
     else:
         logging.error(f"Unknown action {action}")
         return

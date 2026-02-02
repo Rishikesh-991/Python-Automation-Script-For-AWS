@@ -3,7 +3,6 @@ import boto3
 from botocore.exceptions import ClientError
 import logging
 import time
-import os
 
 # ================= CONFIG =================
 REGION = "us-east-1"
@@ -11,7 +10,7 @@ REGION = "us-east-1"
 DB_IDENTIFIER = "my-postgres-db"
 DB_NAME = "mydb"
 DB_USERNAME = "adminuser"
-DB_PASSWORD = os.environ.get("DB_PASSWORD")  # Set via environment (do NOT commit secrets)
+DB_PASSWORD = "StrongPassword123!"  # Must meet AWS RDS password rules
 DB_INSTANCE_CLASS = "db.t3.micro"   # Free tier eligible
 DB_ENGINE = "postgres"
 DB_PORT = 5432
